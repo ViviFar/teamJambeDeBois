@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1358848419672554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 4.47, z: 0.24}
+  m_LocalPosition: {x: 0.1, y: 4.47, z: 0.428}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4885743471744148}
@@ -188,6 +188,8 @@ MonoBehaviour:
   pollution: 30
   paysage: {fileID: 1358848419672554}
   isAtWar: 1
+  turretContainer: {fileID: 114955703078174292, guid: b9e24a68fc79e4145a3c7d6323e664cb,
+    type: 2}
   turrets: {fileID: 1720636574484158, guid: fab6731e4afd31a43a0d0955df1a352e, type: 2}
   player: {fileID: 0}
 --- !u!135 &135373164787871290

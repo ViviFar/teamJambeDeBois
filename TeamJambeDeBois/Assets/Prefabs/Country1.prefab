@@ -188,6 +188,8 @@ MonoBehaviour:
   pollution: 30
   paysage: {fileID: 1313775673644056}
   isAtWar: 0
+  turretContainer: {fileID: 114955703078174292, guid: b9e24a68fc79e4145a3c7d6323e664cb,
+    type: 2}
   turrets: {fileID: 1720636574484158, guid: fab6731e4afd31a43a0d0955df1a352e, type: 2}
   player: {fileID: 4323668405627844}
 --- !u!136 &136266470982415574
