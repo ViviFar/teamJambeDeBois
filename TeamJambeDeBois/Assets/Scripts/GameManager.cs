@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        //To modify to use Oculus input instead of mouse left click on
         if (Input.GetMouseButtonDown(0))
         {
             listCountry[currentCountry].gameObject.SetActive(false);
