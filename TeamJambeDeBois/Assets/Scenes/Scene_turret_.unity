@@ -369,6 +369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2fde9b85d771e49ae350c1606f43af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  m_target: {fileID: 0}
 --- !u!4 &2060628184
 Transform:
   m_ObjectHideFlags: 0
@@ -394,6 +396,7 @@ GameObject:
   - component: {fileID: 2099901724}
   - component: {fileID: 2099901723}
   - component: {fileID: 2099901722}
+  - component: {fileID: 2099901725}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -469,3 +472,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2099901720}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2099901725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099901720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2fde9b85d771e49ae350c1606f43af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  m_target: {fileID: 0}
