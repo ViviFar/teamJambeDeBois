@@ -5,7 +5,7 @@ using UnityEngine;
 public class projectile : MonoBehaviour {
 
 
-    public float speed = 3.0f;
+    public float speed = 12.0f;
     Vector3 m_direction;
     bool m_fired;
 
@@ -30,4 +30,5 @@ public class projectile : MonoBehaviour {
 
         }
     }
+
 }
