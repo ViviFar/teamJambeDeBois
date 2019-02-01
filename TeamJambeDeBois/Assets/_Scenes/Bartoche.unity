@@ -1032,7 +1032,7 @@ PrefabInstance:
     - target: {fileID: 3204969240450189621, guid: 753697ce29924be4e87cc35dd5e90c02,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 753697ce29924be4e87cc35dd5e90c02, type: 3}

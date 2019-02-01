@@ -49,6 +49,9 @@ public class cursorBehavior : MonoBehaviour
             pos = new Vector3(cursor_p.position.x, 0.01f, 0);
             cursor_p.localPosition = pos;
 
+            //Health
+            cursor_h.localScale = new Vector3(10.0f, 0.2f, 0.025f);
+
 
         // Initialisation des conditions
         temperature = country.temperature;
