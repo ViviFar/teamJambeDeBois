@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
+    [SerializeField]
+    private cursorBehavior cursor;
 
     public List<Country> listCountry;
 
@@ -36,6 +40,15 @@ public class GameManager : MonoBehaviour {
                 currentCountry = 0;
             }
             listCountry[currentCountry].gameObject.SetActive(true);
+        }
+
+        if(cursor.cursor_d.localPosition.z>=5 || cursor.cursor_d.localPosition.z <= -5
+            || cursor.cursor_t.localPosition.z >= 5 || cursor.cursor_t.localPosition.z <= -5
+            || cursor.cursor_p.localPosition.z >= 5 || cursor.cursor_p.localPosition.z <= -5)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(cursor.gameObject);
+            SceneManager.LoadScene("Game over");
         }
 	}
 }

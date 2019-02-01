@@ -1050,6 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5273e9e50f541a418c0790b722fb338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursor: {fileID: 495320668}
   listCountry:
   - {fileID: 27930009}
   - {fileID: 472358898}
