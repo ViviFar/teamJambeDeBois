@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public int currentCountry = 0;
 
+    private float timer = 0;
+
 
 
     private void Start()
@@ -22,16 +24,14 @@ public class GameManager : MonoBehaviour
             listCountry[i].gameObject.SetActive(false);
         }
     }
-
-    private void OnMouseDown()
-    {
-
-    }
+    
 
     // Update is called once per frame
     void Update () {
+
+        timer += Time.deltaTime;
         //To modify to use Oculus input instead of mouse left click on
-        if (Input.GetMouseButtonDown(0))
+        if (timer>=30)
         {
             listCountry[currentCountry].gameObject.SetActive(false);
             currentCountry++;
@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
                 currentCountry = 0;
             }
             listCountry[currentCountry].gameObject.SetActive(true);
+            timer = 0;
         }
 
         if(cursor.cursor_d.localPosition.z>=5 || cursor.cursor_d.localPosition.z <= -5
