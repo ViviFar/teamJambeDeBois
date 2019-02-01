@@ -143,7 +143,10 @@ public class cursorBehavior : MonoBehaviour
     public void takeDamage(float healthChanger)
     {
         oldHealthScale += healthChanger;
-        Vector3 scale = new Vector3(10.0f, 0.2f,oldHealthScale);
-        cursor_h.localScale = scale;
+        if (oldHealthScale > 0)
+        {
+            Vector3 scale = new Vector3(10.0f, 0.2f, oldHealthScale);
+            cursor_h.localScale = scale;
+        }
     }
 }
