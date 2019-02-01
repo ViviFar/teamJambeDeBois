@@ -38,15 +38,15 @@ public class cursorBehavior : MonoBehaviour
 
         //Initialisation des positions
             //Température
-            Vector3 pos = new Vector3(cursor_t.position.x, cursor_t.position.y, 0);
+            Vector3 pos = new Vector3(cursor_t.position.x, 0.01f, 0);
             cursor_t.localPosition = pos;
 
             //Dryness
-            pos = new Vector3(cursor_d.position.x, cursor_d.position.y, 0);
+            pos = new Vector3(cursor_d.position.x, 0.01f, 0);
             cursor_d.localPosition = pos;
 
             //Pollution
-            pos = new Vector3(cursor_p.position.x, cursor_p.position.y, 0);
+            pos = new Vector3(cursor_p.position.x, 0.01f, 0);
             cursor_p.localPosition = pos;
 
 
