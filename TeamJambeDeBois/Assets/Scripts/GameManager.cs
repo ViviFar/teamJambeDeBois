@@ -44,7 +44,8 @@ public class GameManager : MonoBehaviour
 
         if(cursor.cursor_d.localPosition.z>=5 || cursor.cursor_d.localPosition.z <= -5
             || cursor.cursor_t.localPosition.z >= 5 || cursor.cursor_t.localPosition.z <= -5
-            || cursor.cursor_p.localPosition.z >= 5 || cursor.cursor_p.localPosition.z <= -5)
+            || cursor.cursor_p.localPosition.z >= 5 || cursor.cursor_p.localPosition.z <= -5
+            || cursor.cursor_h.localScale.z <= 0 || cursor.cursor_h.localScale.z>=0.05)
         {
             DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(cursor.gameObject);
