@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
@@ -13,25 +13,29 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public int currentCountry = 0;
 
-    private float timer = 0;
+    public TextMesh countdown;
+
+    private float timer = 30;
 
 
 
     private void Start()
     {
-        for(int i=1; i<listCountry.Count; i++)
+        for (int i = 1; i < listCountry.Count; i++)
         {
             listCountry[i].gameObject.SetActive(false);
         }
     }
-    
+
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
-        timer += Time.deltaTime;
-        //To modify to use Oculus input instead of mouse left click on
-        if (timer>=30)
+        timer -= Time.deltaTime;
+        float roundTimer = Mathf.Round(timer * 10) / 10;
+        countdown.text = roundTimer.ToString();
+        if (timer <= 25)
         {
             listCountry[currentCountry].gameObject.SetActive(false);
             currentCountry++;
@@ -40,17 +44,17 @@ public class GameManager : MonoBehaviour
                 currentCountry = 0;
             }
             listCountry[currentCountry].gameObject.SetActive(true);
-            timer = 0;
+            timer = 30;
         }
 
-        if(cursor.cursor_d.localPosition.z>=5 || cursor.cursor_d.localPosition.z <= -5
+        if (cursor.cursor_d.localPosition.z >= 5 || cursor.cursor_d.localPosition.z <= -5
             || cursor.cursor_t.localPosition.z >= 5 || cursor.cursor_t.localPosition.z <= -5
             || cursor.cursor_p.localPosition.z >= 5 || cursor.cursor_p.localPosition.z <= -5
-            || cursor.cursor_h.localScale.z <= 0 || cursor.cursor_h.localScale.z>=0.05)
+            || cursor.cursor_h.localScale.z <= 0 || cursor.cursor_h.localScale.z >= 0.05)
         {
             DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(cursor.gameObject);
             SceneManager.LoadScene("Game over");
         }
-	}
+    }
 }

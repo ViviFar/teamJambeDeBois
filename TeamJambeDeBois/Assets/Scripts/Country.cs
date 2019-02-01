@@ -18,7 +18,7 @@ public class Country : MonoBehaviour {
         //if the country is at war, create a random number of turrets when the player enters the country
         if (isAtWar)
         {
-            Instantiate(turretContainer, transform);
+            Instantiate(turretContainer);
         }
 	}
 
@@ -26,7 +26,7 @@ public class Country : MonoBehaviour {
     {
         if (isAtWar)
         {
-            Destroy(GetComponentInChildren<TurretContainer>().gameObject);
+            Destroy(FindObjectOfType<TurretContainer>().gameObject);
         }
     }
 

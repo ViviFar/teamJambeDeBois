@@ -5,6 +5,7 @@ using UnityEngine;
 public class projectileBehavior : MonoBehaviour
 {
     public float healthChanger;
+    [HideInInspector]
     public cursorBehavior cursor;
 
     private void Start()

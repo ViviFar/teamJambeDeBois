@@ -15,7 +15,7 @@ public class TurretContainer : MonoBehaviour {
         {
             GameObject turret = Instantiate(turrets, transform);
             turret.transform.position = new Vector3(Random.Range(20, 40), 1, Random.Range(-40, 40));
-            turret.transform.rotation = Quaternion.LookRotation(player.position, new Vector3(0, 1, 0));
+            turret.transform.rotation = new Quaternion();
         }
 	}
 	
